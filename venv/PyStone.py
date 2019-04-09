@@ -74,4 +74,7 @@ while face1*face2>0:
             else:
                 entable[inp2].hp-=table[inp].str
                 table[inp].hp-=entable[inp2].str
-                #TODO убирать битые карты с поля
+                if entable[inp2].hp<=0:
+                    entable.pop(inp2)
+                if table[inp].hp<=0:
+                    table.pop(inp)
