@@ -77,4 +77,4 @@ while face1*face2>0:
                 if entable[inp2].hp<=0:
                     entable.pop(inp2)
                 if table[inp].hp<=0:
-                    pass
+                    table.pop(inp)
