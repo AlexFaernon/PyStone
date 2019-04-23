@@ -35,7 +35,7 @@ for i in f:
 f.close()
 
 #false - 1, true -2
-for i in range(3):
+for i in range(2):
     arm1.append(deck1.pop(randint(0,len(deck1)-1)))
     arm2.append(deck2.pop(randint(0, len(deck2) - 1))) # 3 рандомных карты в руку
 turn=bool(randint(0,1))
@@ -53,6 +53,7 @@ while face1*face2>0:
         deck=deck1
         entable=table2
         enarm=arm2
+    if deck: arm.append(deck.pop(randint(0, len(deck) - 1)))
     Description.screen(arm,table,entable,enarm)
     inp=Scripts.select("'pass' to pass the turn,'cast' to cast the card or 'attack' to attack with casted card\n",-1,["pass","cast","attack"])
     if inp=="pass":

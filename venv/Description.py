@@ -26,13 +26,16 @@ def screen(arm,table,entable,enarm):
     for i in range(len(entable)):
         print("   ",i," "*(5-len(str(i))),end="")
     print()
-    for i in entable:
+    for _ in entable:
         print("/--------\\",end="")
+    print()
+    for _ in entable:
+        print("|hp   str|",end="")
     print()
     for i in entable:
         print("|", i.hp, " " * (8 - len(str(i.hp)) - len(str(i.str))), i.str, "|" , sep="", end="")
     print()
-    for i in entable:
+    for _ in entable:
         print("\\--------/",end="")
     print()
 
@@ -41,13 +44,16 @@ def screen(arm,table,entable,enarm):
     for i in range(len(table)):
         print("   ",i," "*(5-len(str(i))),end="")
     print()
-    for i in table:
+    for _ in table:
         print("/--------\\",end="")
+    print()
+    for _ in table:
+        print("|hp   str|",end="")
     print()
     for i in table:
         print("|", i.hp, " " * (8 - len(str(i.hp)) - len(str(i.str))), i.str, "|" , sep="", end="")
     print()
-    for i in table:
+    for _ in table:
         print("\\--------/",end="")
     print()
 
@@ -57,12 +63,15 @@ def screen(arm,table,entable,enarm):
     for i in range(len(arm)):
         print("   ",i," "*(5-len(str(i))),end="")
     print()
-    for i in arm:
+    for _ in arm:
         print("/--------\\",end="")
+    print()
+    for _ in arm:
+        print("|hp   str|",end="")
     print()
     for i in arm:
         print("|", i.hp, " " * (8 - len(str(i.hp)) - len(str(i.str))), i.str, "|" , sep="", end="")
     print()
-    for i in arm:
+    for _ in arm:
         print("\\--------/",end="")
     print()
