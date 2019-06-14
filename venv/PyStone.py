@@ -39,22 +39,27 @@ for i in range(2):
     arm1.append(deck1.pop(randint(0,len(deck1)-1)))
     arm2.append(deck2.pop(randint(0, len(deck2) - 1))) # 3 рандомных карты в руку
 turn=bool(randint(0,1))
-face1=face2=30
-while face1*face2>0:
+face1=[30]
+face2=[30]
+while face1[0]*face2[0]>0:
     if turn:
         table=table2
         arm=arm2
         deck=deck2
         entable=table1
         enarm=arm1
+        face=face2
+        enface=face1
     else:
         table=table1
         arm=arm1
         deck=deck1
         entable=table2
         enarm=arm2
+        face=face1
+        enface=face2
     if deck: arm.append(deck.pop(randint(0, len(deck) - 1)))
-    Description.screen(arm,table,entable,enarm)
+    Description.screen(arm,table,entable,enarm,face,enface)
     inp=Scripts.select("'pass' to pass the turn,'cast' to cast the card or 'attack' to attack with casted card\n",-1,["pass","cast","attack"])
     if inp=="pass":
         turn = not turn

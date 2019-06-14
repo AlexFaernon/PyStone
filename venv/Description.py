@@ -6,8 +6,11 @@ def spl(s): #кажется мне это не нужно но я это пок�
     if len(s)%8!=0:
         l.append(s[len(s)-len(s)%8:])
     return l
-def screen(arm,table,entable,enarm):
+def screen(arm,table,entable,enarm,face,enface):
     system("cls")
+    print("/"+"~"*(len(enarm)*10-2 if enarm else 8)+"\\")
+    print("|",(len(enarm)*10-2 if enarm else 8)//2*" ",enface[0],((len(enarm)*10-2 if enarm else 8)-(len(enarm)*10-2 if enarm else 8)//2-len(str(enface[0])))*" ","|",sep="")
+    print("\\" + "~" * (len(enarm) * 10 - 2 if enarm else 8) + "/")
     for i in range(len(enarm)):
         print("   ",i," "*(5-len(str(i))),end="")
     print()
@@ -74,4 +77,8 @@ def screen(arm,table,entable,enarm):
     print()
     for _ in arm:
         print("\\--------/",end="")
+    print()
+    print("/" + "~" * (len(arm) * 10 - 2 if arm else 8) + "\\")
+    print("|", (len(arm) * 10 - 2 if arm else 8) // 2 * " ", face[0], ((len(arm) * 10 - 2 if arm else 8) - (len(arm) * 10 - 2 if arm else 8) // 2 - len(str(face[0]))) * " ", "|", sep="")
+    print("\\" + "~" * (len(arm) * 10 - 2 if arm else 8) + "/")
     print()
